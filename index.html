@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registro de Código Postal</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h1>Registro de Usuario</h1>
+
+    <p class="subtitulo">
+      Completa correctamente toda la información solicitada.
+    </p>
+
+    <form id="formPostal">
+
+      <div class="campo">
+
+        <label>Nombre Completo</label>
+
+        <input 
+          type="text"
+          id="nombre"
+          placeholder="Escribe tu nombre completo"
+          required
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>Correo Electrónico</label>
+
+        <input 
+          type="email"
+          id="correo"
+          placeholder="ejemplo@gmail.com"
+          required
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>Edad</label>
+
+        <input 
+          type="number"
+          id="edad"
+          min="10"
+          max="100"
+          placeholder="Ingresa tu edad"
+          required
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>Teléfono</label>
+
+        <input 
+          type="tel"
+          id="telefono"
+          placeholder="10 dígitos"
+          required
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>Estado</label>
+
+        <select id="estado" required>
+
+          <option value="">Selecciona un estado</option>
+
+          <option>México</option>
+          <option>Jalisco</option>
+          <option>Puebla</option>
+          <option>Monterrey</option>
+          <option>Querétaro</option>
+          <option>CDMX</option>
+
+        </select>
+
+      </div>
+
+      <div class="campo">
+
+        <label>Código Postal</label>
+
+        <input 
+          type="text"
+          id="cp"
+          placeholder="Ejemplo: 50450"
+          pattern="[0-9]{5}"
+          maxlength="5"
+          required
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>Dirección</label>
+
+        <input 
+          type="text"
+          id="direccion"
+          placeholder="Ingresa tu dirección"
+          required
+        >
+
+      </div>
+
+      <button type="submit">
+        Registrar Información
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- MODAL -->
+
+  <div class="modal" id="modal">
+
+    <div class="modal-box">
+
+      <h2>Información Registrada</h2>
+
+      <div id="info"></div>
+
+      <button onclick="cerrarModal()">
+        Cerrar
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
